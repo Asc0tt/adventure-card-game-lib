@@ -1,4 +1,4 @@
-![Coverage](https://raw.githubusercontent.com/Asc0tt/adventure-card-game-lib/master/coverage_badge.svg?sanitize=true)
+![Coverage](https://github.com/Asc0tt/adventure-card-game-lib/blob/master/coverage_badge.svg)
 <!-- 
 This README describes the package. If you publish this package to pub.dev,
 this README's contents appear on the landing page for your package.
