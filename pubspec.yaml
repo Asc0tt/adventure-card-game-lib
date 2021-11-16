@@ -13,3 +13,7 @@ environment:
 dev_dependencies:
   lints: ^1.0.0
   test: ^1.16.0
+  test_coverage: ^0.4.2
+# meta: 1.6.0             # solve problem on sdk 2.14.4 and test_coverage: ^0.4.2. ...
+                          # Error: The property 'displayString' is defined in multiple ...
+                          # ... extensions for 'TargetKind' and neither is more specific.
