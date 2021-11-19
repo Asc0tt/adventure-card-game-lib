@@ -12,9 +12,12 @@ class Deck {
   final Queue<Card> _cards = Queue<Card>();
   final List<Card> _discardPile = List.empty(growable: true);
 
-  final _shuffler = CardShuffler<Card>();
+  final int _seed;
+  late final CardShuffler<Card> _shuffler;
 
-  Deck(this.name, this.deckType, this._behavior);
+  Deck(this.name, this.deckType, this._behavior, this._seed) {
+    _shuffler = CardShuffler<Card>(_seed);
+  }
 
   bool isEmpty() => _cards.isEmpty;
   int deckCount() => _cards.length;
