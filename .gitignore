@@ -22,6 +22,8 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
-
+*.iml
 
 /test/.test_coverage.dart
+/coverage/
+/.idea/
