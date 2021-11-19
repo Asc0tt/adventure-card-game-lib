@@ -1,7 +1,13 @@
 import 'dart:math';
 
 class CardShuffler<T> {
-  final Random _random = Random();
+  final int _seed;
+  late final Random _random;
+
+  CardShuffler(this._seed){
+    _random = Random(_seed);
+  }
+
   List<T> shuffle(List<T> cards) {
     var result = List<T>.from(cards);
     for(var index = 0; index < cards.length; index++){

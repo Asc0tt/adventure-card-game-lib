@@ -1,6 +1,7 @@
 class LocalText {
   // key: lang, value: localizedText
   final Map<String,String> _translates;
+  static final notDefinedLangText = 'null';
 
   LocalText(this._translates);
 
@@ -8,10 +9,14 @@ class LocalText {
     return LocalText(<String,String>{});
   }
 
-  String getLocalizedText (String langKey) {
+  String? getLocalizedText (String langKey) {
+    if(isEmpty()) {
+      return notDefinedLangText;
+    }
     var result = _translates[langKey];
+
     if(result == null) {
-      return "localized text not found for specific language: $langKey";
+      return notDefinedLangText;
     }
     return result;
   }
